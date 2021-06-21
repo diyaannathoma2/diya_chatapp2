@@ -1,0 +1,110 @@
+
+<!-- <div class="py-5" style="width: 60%;margin-left: 20%;">
+  <div class="row">
+      <div class="col-md-6 mx-auto">
+          <span class="anchor" id="formSignup"></span>
+          <div class="card rounded-0">
+              <div class="card-header">
+                  <h3 class="mb-0">SignUp</h3>
+              </div>
+              <div class="card-body" style="background-color: cadetblue; ">
+                  <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+                    
+                    
+
+
+                      <div  >
+                          <label for="username" style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Username</label>
+                          <br>
+                          <input type="text" name="username"
+      id="username"
+      placeholder="Enter your username"
+      autofocus="true"
+      >
+                          
+                         
+                      </div>
+                      <div>
+                          <label for="password" style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Password</label>
+                          <br>
+                          <input type="password" name="password"
+      id="password"
+      placeholder="Enter your password"
+      formControlName="password"
+      >
+                          
+                          
+                      </div>
+                      <br>
+                      <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary float-right">SignUp</button>
+                  </form>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <h2 class="page-header">Register</h2>
+
+  <form [formGroup]="registerForm"
+    (ngSubmit)="onRegisterSubmit()"
+    >
+
+  <div class="form-group">
+    <label for="username">Username</label>
+
+    <input type="text" name="username" class="form-control"
+      id="username"
+      placeholder="Enter your username"
+      formControlName="username"
+      autofocus="true"
+      >
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+
+    <input type="password" name="password" class="form-control"
+      id="password"
+      placeholder="Enter your password"
+      formControlName="password"
+      >
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPass">Confirm password</label>
+
+      <input type="password" name="confirmPass" class="form-control"
+      id="confirmPass"
+      placeholder="Confirm password"
+      formControlName="confirmPass"
+      >
+  </div>
+
+  <div class="form-group">
+    <button [disabled]="registerForm.invalid"
+      type="submit"
+      class="btn btn-primary"
+      name="register"
+      >Register
+    </button>
+  </div>
+
+  <a [routerLink]="['/login']">Already have an account?</a>
+
+  </form>
+
+</div>

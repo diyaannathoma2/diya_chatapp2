@@ -208,11 +208,11 @@ export class ChatRoomComponent implements OnInit, OnDestroy {
   onUsersClick(): void {
     this.showActive = !this.showActive;
   }
-  // blockUsers(username: string){
-  //   if(this.chatWith = username){
-  //     this.router.navigate(['/chat', username]);
-  //   }
-  // }
+  blockUsers(username: string){
+    if(this.chatWith = username){
+      this.router.navigate(['/chat', username]);
+    }
+  }
 
   onNewConv(username: string) {
     if (this.chatWith != username) {
